@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  postgres-db:
+    image: postgres:17.1  # Use the latest stable version
+    container_name: postgres-db
+    restart: always
+    ports:
+      - "5432:5432"  # Map PostgreSQL default port
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: bookstoredb  # Create the initial database
+    volumes:
+      - postgres_data:/var/lib/postgresql/data  # Persist data in a volume
+
+volumes:
+  postgres_data:
+    driver: local

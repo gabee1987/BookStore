@@ -1,0 +1,22 @@
+<mat-card class="book-details-card" *ngIf="book">
+  <div class="book-details-header">
+    <img
+      *ngIf="book.imageUrl"
+      [ngSrc]="book.imageUrl"
+      width="150"
+      height="230"
+      alt="{{ book.title }}"
+      class="book-cover"
+    />
+    <div class="book-details-title">
+      <h2>{{ book.title }}</h2>
+      <h3>By {{ book.author }}</h3>
+    </div>
+  </div>
+  <div class="book-details-description">
+    <p>{{ book.description }}</p>
+  </div>
+  <div class="back-button-container">
+    <button mat-raised-button color="primary" [routerLink]="['/']">Back to List</button>
+  </div>
+</mat-card>

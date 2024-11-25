@@ -1,0 +1,50 @@
+.edit-book-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1200px;
+  padding: 2rem;
+}
+
+.modal-header {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+}
+
+.modal-title {
+  margin: 1rem;
+}
+
+.cover-preview {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-top: 1rem;
+
+  .book-cover {
+    max-width: 150px;
+    max-height: 230px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.edit-book-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+mat-form-field {
+  margin-bottom: 16px;
+}
+
+.edit-book-button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.edit-book-submit-btn {
+  max-width: 200px;
+}

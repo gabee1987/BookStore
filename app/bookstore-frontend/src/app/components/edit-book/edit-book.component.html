@@ -1,0 +1,45 @@
+<div class="edit-book-container">
+  <div class="modal-header">
+    <div class="modal-title">
+      <h2>Edit New Book</h2>
+    </div>
+    <div *ngIf="isLoading" class="loading-indicator">
+      <mat-spinner></mat-spinner>
+    </div>
+
+    <div class="cover-preview" *ngIf="book.imageUrl">
+      <img [ngSrc]="book.imageUrl" width="150" height="230" alt="Book Cover" class="book-cover" />
+    </div>
+  </div>
+
+  <form (ngSubmit)="updateBook()" class="edit-book-form">
+    <mat-form-field appearance="fill">
+      <mat-label>Title</mat-label>
+      <input matInput [(ngModel)]="book.title" name="title" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Author</mat-label>
+      <input matInput [(ngModel)]="book.author" name="author" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Description</mat-label>
+      <textarea matInput [(ngModel)]="book.description" name="description"></textarea>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Image URL</mat-label>
+      <input matInput [(ngModel)]="book.imageUrl" name="imageUrl" />
+    </mat-form-field>
+
+    <div class="edit-book-button-container">
+      <button mat-raised-button color="primary" type="submit" class="edit-book-submit-btn">
+        Update Book
+      </button>
+      <button mat-button color="warn" (click)="closeModal()" class="edit-book-cancel-btn">
+        Cancel
+      </button>
+    </div>
+  </form>
+</div>

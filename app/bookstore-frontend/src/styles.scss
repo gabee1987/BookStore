@@ -1,0 +1,48 @@
+@use '@angular/material' as mat;
+
+// Include the core styles
+@include mat.core();
+
+// Define a Material Design 3 theme
+$custom-theme: mat.define-theme((
+  color: (
+    theme-type: light, // Can be 'light' or 'dark'
+    primary: mat.$azure-palette,
+    tertiary: mat.$blue-palette,
+  ),
+  typography: (
+    plain-family: 'Roboto, sans-serif',
+    brand-family: 'Roboto Slab, serif',
+    bold-weight: 700,
+    medium-weight: 500,
+    regular-weight: 400,
+  ),
+  density: (
+    scale: 0 // Default density, can be reduced with negative values
+  )
+));
+
+// Apply the theme globally
+html {
+  // Apply the core styles for the theme
+  @include mat.core-theme($custom-theme);
+
+  // Apply styles for all Angular Material components
+  @include mat.all-component-themes($custom-theme);
+}
+
+// Optional: Enable strong focus indicators for accessibility
+@include mat.strong-focus-indicators();
+@include mat.strong-focus-indicators-theme($custom-theme);
+
+// Add basic application styles
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+/* Only show outline when the button is focused via keyboard (not mouse) */
+button:focus:not(:focus-visible) {
+  outline: none;
+}

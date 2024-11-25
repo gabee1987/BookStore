@@ -1,0 +1,20 @@
+<div class="toastr-container">
+  <mat-card
+    *ngFor="let notification of notifications$ | async"
+    class="toastr {{ notification.type }}"
+    [@slide]
+  >
+    <button
+      mat-icon-button
+      color="warn"
+      class="close-btn"
+      (click)="removeNotification(notification.id)"
+    >
+      <mat-icon>close</mat-icon>
+    </button>
+    <mat-card-header *ngIf="notification.title">
+      <mat-card-title>{{ notification.title }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="toastr-content">{{ notification.message }}</mat-card-content>
+  </mat-card>
+</div>

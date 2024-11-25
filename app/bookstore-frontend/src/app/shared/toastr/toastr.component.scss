@@ -1,0 +1,58 @@
+.toastr-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  max-width: 300px;
+}
+
+.toastr {
+  margin-bottom: 10px;
+  padding: 16px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  color: white;
+  box-shadow: 0 10px 16px rgba(0, 0, 0, 0.4);
+}
+
+.toastr-content {
+  padding-top: 16px;
+  font-weight: 300;
+}
+
+.toastr.success {
+  background-color: #4caf50;
+}
+
+.toastr.error {
+  background-color: #f44336;
+}
+
+.toastr.info {
+  background-color: #2196f3;
+}
+
+.toastr.warning {
+  background-color: #ff9800;
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+}
+
+.mat-icon {
+  font-size: 16px;
+}

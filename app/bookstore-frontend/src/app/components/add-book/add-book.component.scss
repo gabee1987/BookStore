@@ -1,0 +1,26 @@
+.add-book-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.add-book-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+mat-form-field {
+  margin-bottom: 16px;
+}
+
+.add-book-button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-book-submit-btn {
+  max-width: 200px;
+}

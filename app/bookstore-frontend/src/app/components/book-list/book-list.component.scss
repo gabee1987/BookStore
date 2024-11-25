@@ -1,0 +1,53 @@
+.book-list-container {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: 96dvh; /* Full page height */
+  overflow: hidden; /* Prevent page scrolling */
+}
+
+.table-wrapper {
+  flex: 1; /* Take remaining space */
+  overflow-y: auto; /* Scroll vertically */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 8px;
+  background: #f9f9f9;
+}
+
+.header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.thumbnail {
+  max-width: 50px;
+  max-height: 75px;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+}
+
+.book-table {
+  width: 100%;
+}
+
+mat-table {
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+mat-header {
+  border-radius: 10px;
+}
+
+mat-cell {
+  padding: 10px;
+}
